@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     const bearer = authHeader?.startsWith("Bearer ") ? authHeader.substring(7) : null;
 
     const providedSecret = secretParam || secretHeader || bearer;
-    const configuredSecret = process.env.ADMIN_SECRET || "yarfix_admin_secret_2026";
+    const configuredSecret = process.env.ADMIN_SECRET || "Najaf123";
 
     if (!providedSecret || providedSecret !== configuredSecret) {
       return NextResponse.json(
